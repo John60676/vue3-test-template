@@ -1,20 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="mb-40">
+    <router-link class="mr-30" to="/">Go to Index</router-link>
+    <router-link to="/shop">Go to Shop</router-link>
+  </div>
+  <router-view></router-view>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import { defineComponent } from "vue"
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+export default defineComponent({
+  name: "App",
+  components: {},
+})
 </script>
 
 <style>
+.mr-30 {
+  margin-right: 30px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
